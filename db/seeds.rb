@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
+require 'open-uri'
 require 'faker'
 Booking.destroy_all
 Drone.destroy_all
@@ -28,20 +28,17 @@ end
 
 drone_brands = ['DJI', 'Parrot', 'Autel Robotics', 'Yuneec', 'Skydio', 'Holy Stone', 'Ryze Tech', 'Hubsan']
 
-drone_img = ['https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874252/Drone_2_wuszpf.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874252/Drone_5_aqhtdc.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874250/Drone_10_phyzmn.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874251/Drone_6_zzmduw.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874250/Drone_7_jwlbno.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874250/9_xbdoiy.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874248/drone_11_nux0uv.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874247/drone_12_mwhly4.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874247/drone_13_gzrces.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874247/drone_13_gzrces.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874245/drone_16_zggkpa.jpg',
-              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1706874246/drone_15_tq1w6u.jpg']
-
-
+drone_img = ['https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/drone_16_neh9nu.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/drone_15_vd7wlg.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/drone_14_zn4twk.webp',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/drone_13_cerjl6.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/drone_11_p87vnb.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/Drone_7_hi8cdz.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703387/9_x1yock.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703388/Drone_6_p8zmtq.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703388/Drone_2_nqg7bw.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703389/Drone_5_a4r4xm.jpg',
+              'https://res.cloudinary.com/dmlxmpwua/image/upload/v1708703390/Drone_10_aipb0i.jpg']
 
 20.times do
   drone_description = "#{Faker::Hacker.verb} #{Faker::Hacker.noun} with #{Faker::Hacker.adjective} features"
